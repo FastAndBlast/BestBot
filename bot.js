@@ -28,7 +28,7 @@ bellMessages =
     ["command"].forEach(handler => { require(`./handler/${handler}`)(client); });
 
 client.on('ready', () => {
-  client.user.setActivity('virtual classrooms', { type : 'WATCHING' });
+  client.user.setActivity('the bells', { type : 'Ringing' });
   console.log('Online.');
 
   for (i = 0; i < 7; i++) {
