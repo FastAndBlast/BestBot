@@ -7,11 +7,13 @@ const client = new Client({
 client.commands = new Collection();
 client.aliases = new Collection();
 
-bellTimes = [ (new Date())
-                .setHours(8, 0, 0, 0)(new Date())
-                .setHours(8, 0, 0, 0)(new Date())
-                .setHours(8, 0, 0, 0)(new Date())
-                .setHours(8, 0, 0, 0) ];
+bellTimes = [
+  (new Date()).setHours(8, 0, 0, 0),
+  (new Date()).setHours(8, 0, 0, 0),
+  (new Date()).setHours(8, 0, 0, 0),
+  (new Date()).setHours(8, 0, 0, 0),
+  (new Date()).setHours(8, 0, 0, 0),
+  ];
 
 bellMessages =
   [
@@ -96,7 +98,8 @@ client.on('message', async message => {
     if (guild && guild.channels.get('channelid')) {
       guild.channels.get('channelid').send("Good Morning");
     }
-  });
+  }
+});
 
   client.login(process.env.BOT_TOKEN);
 
